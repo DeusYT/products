@@ -9,13 +9,15 @@ const ProductsWrapper = () => {
             <div className="product_count_wrapper">
                 <div className="stepper">
                     <input className="product__count stepper-input" type="text" value="1" />
-                    <span className="stepper-arrow up"></span>
-                    <span className="stepper-arrow down"></span>                                            
+                    <div className="stepper_wrapper">
+                        <span className="stepper-arrow up"></span>
+                        <span className="stepper-arrow down"></span>  
+                    </div>                  
                 </div>
             </div>
-            <span className="btn btn_cart" data-url="/cart/" data-product-id="9bf0afd7-5190-11e5-b9a9-00259036a192">
+            <button className="btn btn_cart" data-url="/cart/" data-product-id="9bf0afd7-5190-11e5-b9a9-00259036a192">
                 <span className="ng-binding">В корзину</span>
-            </span>
+            </button>
         </div>
     );
 }

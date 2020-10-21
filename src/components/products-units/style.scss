@@ -3,9 +3,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    width: 135px;
+    min-width: 135px;
 
     .unit--select {
+        margin-right: 5px;
         font-size: 12px;
         color: #666;
         border-bottom: 1px dotted #666;
