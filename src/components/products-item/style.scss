@@ -1,0 +1,65 @@
+.product {
+    display: flex;
+    margin: 0 auto 20px;
+    padding: 10px;
+    padding-bottom: 40px;
+    max-width: 750px;
+    border: 1px solid #e0e0e0;
+}
+
+.product_status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product_code {
+    margin-right: 25px;
+    font-size: 12px;
+    color: #666;
+}
+
+.product_description {
+    max-width: 330px;
+    margin-bottom: 25px;
+}
+
+.product__link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.6;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.product_price_default {
+    margin: 0;
+    .retailPrice {
+        position: relative;
+        font-size: 25px;
+        font-weight: 600;
+        color:#a7a7a7;
+    }
+
+    .rouble {
+        &::after {
+            background: url('../../images/icons/product/rouble_g.svg');
+            background-size: cover;
+        }
+    }
+}
+
+.product_price_points {
+    font-size: 12px;
+    color: #a7a7a7;
+}
+
+.product_shop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

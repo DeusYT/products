@@ -1,0 +1,56 @@
+.list--unit-desc {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 5px 36px;
+    border: 1px solid #ccc;
+
+    p {
+        position: relative;
+        margin: 0;
+        padding-left: 10px;
+        width: 150px;
+        font-size: 13px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: -20px;
+            width: 15px;
+            height: 15px;
+            background: url('../../images/icons/product/unit--i.png');
+            background-size: cover;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        border-top: 8px solid;
+        display: block;
+        width: 0;
+        height: 0;
+    }
+
+    &::before {
+        margin-bottom: -1px;
+        border-color: #ccc;
+        color: #ccc;
+        left: 13px;
+        border-left: 8px solid transparent!important;
+        border-right: 8px solid transparent!important;
+    }
+
+    &::after {
+        border-color: #fff!important;
+        left: 14px;
+        border-left: 7px solid transparent!important;
+        border-right: 7px solid transparent!important;
+    }
+}
+
+.unit--infoInn {
+    display: block;
+}

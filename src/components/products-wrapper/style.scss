@@ -1,0 +1,19 @@
+.product__wrapper {
+    display: flex;
+    width: 232px;
+
+    .stepper {
+
+    }
+
+    .product__count {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        width: 40px; 
+        
+        box-sizing: border-box;
+        border: 1px solid #e0e0e0;
+        outline: none;
+    }
+}

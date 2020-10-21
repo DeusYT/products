@@ -1,0 +1,26 @@
+.unit--wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 135px;
+
+    .unit--select {
+        font-size: 12px;
+        color: #666;
+        border-bottom: 1px dotted #666;
+        cursor: pointer;
+
+        .ng-binding {
+            margin: 0;
+            padding: 2px 3px;
+        }
+    }
+
+    .unit--active {
+        color: #fff;
+        background: #000;
+        cursor: default;
+    }
+}
+

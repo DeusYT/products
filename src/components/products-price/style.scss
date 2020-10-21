@@ -1,0 +1,29 @@
+.product_price_club_card {
+    position: relative;
+    margin: 0;
+    .goldPrice {
+        position: relative;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+.rouble {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: -18px;
+        width: 18px;
+        height: 18px;
+        background: url('../../images/icons/product/rouble_b.svg');
+        background-size: cover;
+    }
+}
+
+.product_price_club_card_text {
+    position: absolute;
+    left: -60px;
+    font-size: 13px;
+    text-align: end;
+}
