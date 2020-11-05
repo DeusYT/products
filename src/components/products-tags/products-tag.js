@@ -17,12 +17,12 @@ const ProductsTag = ({ tags }) => {
 
                 if(i == tags.length-1) {
                     return (
-                        <a href="#" className="url--link">{ item }.</a>
+                        <a key={i} href="#" className="url--link">{ item }.</a>
                     );
                 }
 
                 return (
-                    <a href="#" className="url--link">{ item },</a>
+                    <a key={i} href="#" className="url--link">{ item },</a>
                 );
             })
             }

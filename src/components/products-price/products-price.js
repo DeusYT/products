@@ -2,8 +2,11 @@ import React from 'react';
 
 import './style.scss';
 
-const ProductsPrice = ({ price }) => {
+const ProductsPrice = ({ price, priceAlt, swicher }) => {
 
+    if(!swicher) {
+        price = priceAlt
+    }
 
     return (
         <p className="product_price_club_card">

@@ -4,8 +4,8 @@
 
     .product__count {
         position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 11px;
+        padding-bottom: 12px;
         padding-left: 15px;
         width: 40px; 
         box-sizing: border-box;
@@ -22,16 +22,16 @@
         
         display: inline-block;
         width: 20px;
-        height: 30px;
     }
 
     .stepper-arrow {
         display: block;
-        width: 20px;
-        height: 17px;
+        width: 21px;
+        height: 20px;
         border: 1px solid #e0e0e0;
         border-left: 0;
         cursor: pointer;
+        outline: none;
 
         &:hover {
             background-color: #666;

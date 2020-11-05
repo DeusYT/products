@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ProductsActive from '../product-active';
 import ProductsImg from '../products-img';
 import ProductsPrice from '../products-price';
@@ -17,7 +18,11 @@ const ProductsDescription = ({ text }) => {
     );
 }
 
-const ProductsPriceDefault = ({priceRetail}) => {
+const ProductsPriceDefault = ({priceRetail, priceRetailAlt, swicher}) => {
+    if(!swicher) {
+        priceRetail = priceRetailAlt
+    }
+
     return (
         <p className="product_price_default">
             <span className="retailPrice rouble"> {priceRetail.toFixed(2)}</span>
@@ -39,7 +44,7 @@ const ProductsPricePointer = ({pointer, uniq}) => {
 }
 
 
-const ProductsListItem = ({ products }) => {
+const ProductsListItem = ({ products, id }) => {
     const {
         productId, 
         code,
@@ -77,14 +82,30 @@ const ProductsListItem = ({ products }) => {
                         <ProductsTag tags={assocProducts} />
                     </div>
                     <div className="product_shop">
-                        <ProductsPrice price={priceGoldAlt} />
-                        <ProductsPriceDefault priceRetail={priceRetailAlt} />
-                        <ProductsPricePointer pointer={bonusAmount} uniq={priceGoldAlt}/>
-                        <ProductsUnits unitFull={unitFull} unitAlt={unitAlt}/>
-                        <ProductsUnitInfo ratio={unitRatioAlt} unit={unit} unitAlt={unitAlt} unitFull={unitFull}/>
-                        <ProductsWrapper />
+                        <ProductsPrice price={priceGoldAlt} 
+                                       priceAlt={priceGold}
+                                        swicher={hasAlternateUnit}/>
+                        <ProductsPriceDefault priceRetail={priceRetailAlt} 
+                                              priceRetailAlt={priceRetail}
+                                              swicher={hasAlternateUnit}/>
+
+                        <ProductsPricePointer pointer={bonusAmount} 
+                                              uniq={priceGoldAlt}/>
+                        <ProductsUnits unitFull={unitFull} 
+                                       unitAlt={unitAlt}
+                                       switcher={hasAlternateUnit}
+                                       id={id}/>
+
+                        <ProductsUnitInfo ratio={unitRatioAlt} 
+                                          unit={unit}
+                                          unitAlt={unitAlt} 
+                                          unitFull={unitFull}/>
+
+                        <ProductsWrapper productID={productId}
+                                         count={unitRatio}
+                                         id={id}
+                                         />
                     </div>
-                    
                 </div>  
         </div>
     )

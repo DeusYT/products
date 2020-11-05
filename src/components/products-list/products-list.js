@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { withProductsService } from '../hoc';
 import Spinner from '../spinner';
-import ErrorIndicator from '../error-indicator';
 import { fetchProducts } from '../../actions';
 
 
 import { connect }  from 'react-redux';
-import reducer from '../../reducer';
 import { compose } from 'redux';
 import ProductsListItem from '../products-item';
 
@@ -17,7 +15,7 @@ const ProductsList = ({ products }) => {
                 products.map((item, i) => {
                     return (
                         <div key={i}>
-                            <ProductsListItem products={item} />
+                            <ProductsListItem products={item} id={i}/>
                         </div>
                     )
                 })
@@ -33,7 +31,7 @@ class ProductsListContainer extends Component {
     }
 
     render() {
-        const { products, loading } = this.props;
+        const { products, loading} = this.props;
 
         if(loading) {
             return <Spinner />
@@ -43,7 +41,7 @@ class ProductsListContainer extends Component {
     }
 }
 
-const mapStateToProps = ({products, loading }) => {
+const mapStateToProps = ({ products, loading }) => {
     return { products, loading };
 };
 
